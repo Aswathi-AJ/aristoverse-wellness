@@ -38,7 +38,7 @@ const Header = () => {
             <div className="flex items-center space-x-4 transform hover:scale-105 transition-transform duration-300">
               {/* Larger Logo Image */}
               <img 
-                src="public/logo.png" 
+                src="logo.png" 
                 alt="Aristoverse Wellness" 
                 className="h-16 w-auto object-contain" 
                 

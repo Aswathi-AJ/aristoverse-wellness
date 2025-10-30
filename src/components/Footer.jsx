@@ -15,13 +15,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg">
-                             <img 
-                src="public/logo.png" 
-                alt="Aristoverse Wellness" 
-                className="h-16 w-auto object-contain max-w-48" 
-              />
-              </div>
+              
               <div>
                 <h3 className="text-2xl font-bold text-white font-montserrat">
                   ARISTOVERSE
