@@ -15,29 +15,10 @@ import ClientPortal from './components/ClientPortal';
 import './index.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('main');
+  const [showClientPortal, setShowClientPortal] = useState(false);
 
-  // Check URL on component mount
-  React.useEffect(() => {
-    if (window.location.pathname === '/client-portal' || window.location.hash === '#client-portal') {
-      setCurrentView('client-portal');
-    }
-  }, []);
-
-  // Handle navigation to client portal
-  const handleNavigateToClientPortal = () => {
-    setCurrentView('client-portal');
-    window.history.pushState({}, '', '/client-portal');
-  };
-
-  // Handle navigation back to main site
-  const handleBackToMainSite = () => {
-    setCurrentView('main');
-    window.history.pushState({}, '', '/');
-  };
-
-  if (currentView === 'client-portal') {
-    return <ClientPortal onBackToSite={handleBackToMainSite} />;
+  if (showClientPortal) {
+    return <ClientPortal onBackToSite={() => setShowClientPortal(false)} />;
   }
 
   return (
@@ -49,7 +30,7 @@ function App() {
       <Modalities />
       <ProcessTimeline />
       <Testimonials />
-      <UploadReports onNavigateToClientPortal={handleNavigateToClientPortal} />
+      <UploadReports onNavigateToClientPortal={() => setShowClientPortal(true)} />
       <Appointment />
       <FAQSection />
       <Footer />

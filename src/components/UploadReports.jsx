@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaShieldAlt, FaUpload, FaDownload, FaLock, FaUsers, FaArrowRight } from 'react-icons/fa';
 
-const UploadReports = () => {
+const UploadReports = ({ onNavigateToClientPortal }) => {
   const fileTypes = [
     "PDF reports", "Word documents", "Excel files", "JPEG/PNG images", 
     ".FIT fitness files", ".VCF genetic data", "23andMe raw data"
@@ -130,7 +130,7 @@ const UploadReports = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action - FIXED */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4 font-montserrat">Ready to Upload Your Documents?</h3>
@@ -138,7 +138,7 @@ const UploadReports = () => {
               Access our secure client portal to upload your health documents and get started with your personalized wellness journey.
             </p>
             <button
-              onClick={() => window.location.href = '/client-portal'}
+              onClick={onNavigateToClientPortal}
               className="inline-flex items-center bg-white text-[#5B00FF] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-200 font-montserrat"
             >
               Go to Client Portal
