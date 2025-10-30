@@ -41,14 +41,11 @@ const Header = () => {
                 src="public/logo.png" 
                 alt="Aristoverse Wellness" 
                 className="h-16 w-auto object-contain" 
-                onError={(e) => {
-                  // Fallback if image doesn't load
-                  e.target.style.display = 'none';
-                }}
+                
               />
               {/* Text Logo */}
               <div className="text-left">
-                <h1 className="text-1xl font-bold bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] bg-clip-text text-transparent tracking-tight leading-none font-montserrat">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] bg-clip-text text-transparent tracking-tight leading-none font-montserrat">
                   ARISTOVERSE
                 </h1>
                 <p className="text-sm text-[#00CFFF] font-medium tracking-wide uppercase font-opensans bg-gradient-to-r from-[#00CFFF]/20 to-[#5B00FF]/20 px-3 py-1 rounded-full mt-1">
