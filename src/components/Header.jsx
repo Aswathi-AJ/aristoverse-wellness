@@ -31,24 +31,23 @@ const Header = () => {
 
   return (
     <header className="bg-white/95 backdrop-blur-md border-b border-[#F2F2F2] sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
           {/* Logo with Image and Text */}
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-4 transform hover:scale-105 transition-transform duration-300">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4 transform hover:scale-105 transition-transform duration-300">
               {/* Larger Logo Image */}
               <img 
                 src="logo.png" 
                 alt="Aristoverse Wellness" 
-                className="h-16 w-auto object-contain" 
-                
+                className="h-12 sm:h-16 w-auto object-contain" 
               />
               {/* Text Logo */}
               <div className="text-left">
-                <h1 className="text-1xl font-bold bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] bg-clip-text text-transparent tracking-tight leading-none font-montserrat">
+                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] bg-clip-text text-transparent tracking-tight leading-none font-montserrat">
                   ARISTOVERSE
                 </h1>
-                <p className="text-sm text-[#00CFFF] font-medium tracking-wide uppercase font-opensans bg-gradient-to-r from-[#00CFFF]/20 to-[#5B00FF]/20 px-3 py-1 rounded-full mt-1">
+                <p className="text-xs sm:text-sm text-[#00CFFF] font-medium tracking-wide uppercase font-opensans bg-gradient-to-r from-[#00CFFF]/20 to-[#5B00FF]/20 px-2 sm:px-3 py-1 rounded-full mt-1">
                   WELLNESS
                 </p>
               </div>
@@ -70,15 +69,16 @@ const Header = () => {
           </nav>
 
           {/* CTA */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <a
               href="https://wa.me/+919894595035"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 text-sm font-montserrat transform hover:scale-105 flex items-center space-x-2 shadow-lg"
+              className="bg-gradient-to-r from-[#00CFFF] to-[#5B00FF] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 text-xs sm:text-sm font-montserrat transform hover:scale-105 flex items-center space-x-2 shadow-lg"
             >
-              <FaWhatsapp className="w-4 h-4" />
-              <span>Book Consultation</span>
+              <FaWhatsapp className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Book Consultation</span>
+              <span className="sm:hidden">Book</span>
             </a>
             
             <button
@@ -92,8 +92,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-[#F2F2F2] py-4 bg-white/95 backdrop-blur-md">
-            <nav className="flex flex-col space-y-2">
+          <div className="lg:hidden border-t border-[#F2F2F2] py-4 bg-white/95 backdrop-blur-md absolute left-0 right-0 top-full shadow-lg">
+            <nav className="flex flex-col space-y-2 px-4 sm:px-6">
               {navItems.map((item) => (
                 <button
                   key={item.name}
